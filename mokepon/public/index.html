@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mokepon</title>
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section id="seleccionar-mascota">
+        <h1 class="titulo"><img src="./img/titulo.png" alt=""></h1>
+        <h2 class="subtitulo">Elige tu Pokemon:</h2>
+        <div id="contenedorTarjetas" class="mascotas">
+        </div>
+        <button id="boton_mascota">seleccionar</button>
+    </section>
+
+    <section id="ver_mapa">
+        <h2 class="titulo">Recorre el mapa con tu pokemon</h2>
+        <canvas id="mapa"></canvas>
+        <button ontouchstart="movercharmanderarriba()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()"
+            onmousedown="movercharmanderarriba()">Arriba</button>
+        <div>
+            <button ontouchstart="movercharmanderderecha()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()"
+                onmousedown="movercharmanderderecha()">Derecha</button>
+            <button ontouchstart="movercharmanderizquierda()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()"
+                onmousedown="movercharmanderizquierda()">Izquierda</button>
+            <button ontouchstart="movercharmanderabajo()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()"
+                onmousedown="movercharmanderabajo()">Abajo</button>
+        </div>
+
+    </section>
+
+    <section id="seleccionar_ataque">
+        <h1 class="subtitulo"><img src="./img/titulo.png" alt=""></h1>
+        <h2 class="subtitulo">Elige tu ataque:</h2>
+
+        <div id="contenedorAtaques" class="tarjetas_ataque">
+            
+        </div>
+
+        <div id="mensajes">
+            <div id="resultado"></div>
+            <section id="reiniciar">
+                <button id="boton_reiniciar">Reiniciar</button>
+            </section>
+        </div>
+
+
+        <div class="ataques_general">
+            <div class="ataque_jugador">
+                <p id="vidas_jugador">0</p>
+                <p id="mascota_jugador"></p>
+                <div id="ataques_del_jugador"></div>
+            </div>
+            <div class="ataque_maquina">
+                <p id="vidas_pc">0</p>
+                <p id="mascota_pc"></p>
+                <div id="ataques_del_pc"></div>
+
+            </div>
+        </div>
+    </section>
+    <script src="./javaScript/mokepon.js"></script>
+</body>
+
+</html> 
